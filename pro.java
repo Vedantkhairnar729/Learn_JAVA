@@ -70,22 +70,12 @@ class pro
 
 
 
-    // 5. Write a Java program to calculate the power of a number without using Math.pow().
-    //    Example:
-    //    Input: 2, 5
-    //    Output: 32
+   
 
-    // 6. Write a Java program to print the multiplication table of a given number from 1 to 20.
 
-    // 7. Write a Java program to count the number of digits in a given number using a for loop.
-    //    Example:
-    //    Input: 45872
-    //    Output: 5 digits
+   
 
-    // 8. Write a Java program to find the sum of all digits of a given number.
-    //    Example:
-    //    Input: 5832
-    //    Output: 18
+
 
     // 9. Write a Java program to reverse a given number using a for loop.
     //    Example:
@@ -121,6 +111,33 @@ class pro
     //      *******
     //     *********
 
+
+
+    int n = 5;
+
+    for (int i = 1; i <= n; i++) {
+
+    // spaces
+        for (int j = 1; j <= n - i; j++) {
+        System.out.print(" ");
+        }
+
+    // stars
+        for (int j = 1; j <= 2 * i - 1; j++) {
+        System.out.print("*");
+        }
+
+    System.out.println();
+    }
+
+
+
+
+
+
+
+
+
     // 14. Write a Java program to print all Armstrong numbers between 1 and 1000.
 
     // 15. Write a Java program to find the second largest number from an array using a for loop.
@@ -131,44 +148,218 @@ class pro
 
 
 
+    // for (int i = 1; i <= 5; i++){
 
+    //     for (int j = 1; j <= 5 -1; j++){
+    //         System.out.print(" ");
+    //     }
+    //     for (int j = 1; j <= i; j++){
+    //         System.out.print("*");
+    //     } 
+
+    //     System.out.println();
+    // }
+
+    // output
+    // *                                    
+    // **                           
+    // *** 
+    // ****
+    // *****  
+
+
+
+    // for(int i = 1; i <= 5; i++){
+    //     for(int j = 1; j <= i; j++){
+    //         System.out.print(i);
+    //     }
+    //     System.out.println();
+    // }
+
+    // output
+    // 1
+    // 22
+    // 333
+    // 4444
+    // 55555
+
+
+
+
+    // for(int i = 1; i <= 5; i++){
+    //     for(int j = 1; j <= i; j++){
+    //         System.out.print(j);
+    //     }
+    //     System.out.println();
+    // }
+
+    //output
+    // 1
+    // 12
+    // 123
+    // 1234
+    // 12345
+    
+
+
+      //Start    // end  
+    // for(int i = 5; i >= 1; i--){
+    //     for(int j = 1; j <= i; j++){
+    //         System.out.print("*");
+    //     }
+    //     System.out.println();
+    // }
+
+    // output:
+    // *****
+    // ****
+    // ***
+    // **
+    // *
+
+
+
+    // for(int i = 1; i <= 5; i++){
+    //     for(int j = 1; j <= i; j++){
+    //         System.out.print("*");
+    //     }
+    //     System.out.println();
+    // }
+
+    // *
+    // **
+    // ***
+    // ****
+    // *****
+
+
+
+    // int n = 5;
+
+    // for(int i = 1; i <= n; i++){
+    //     for(int j = 1; j <= n; j++){
+    //         System.out.print("*");
+    //     }
+    //     System.out.println();
+    // }
+
+    // output
+    // *****
+    // *****
+    // *****
+    // *****
+    // *****
+
+
+
+
+
+
+
+
+
+    // Assingment 11:
+
+    // Assingment 10:
+
+    // Assingment 9:
+
+    // Assingment 8:
+    // 8. Write a Java program to find the sum of all digits of a given number.***************************************************************************
+    //    Example:
+    //    Input: 5832
+    //    Output: 18
+
+    // int num = take.nextInt();
+    // int sum = 0;
+
+    // for(; num != 0; num = num / 10){
+    //     int digit = num % 10;
+    //     sum = sum + digit; 
+    //     System.out.println(sum);
+    // }
+   
+
+
+
+    // Assingment 7:
+    // 7. Write a Java program to count the number of digits in a given number using a for loop.********************************************************
+    //    Example:
+    //    Input: 45872
+    //    Output: 5 digits
+
+    // int num = take.nextInt();
+    // int count = 0;
+    // for(; num != 0; num = num/10){
+    //     count++;
+    // }
+    // System.out.println(count);
+
+
+
+    // Assingment 6:
+    // 6. Write a Java program to print the multiplication table of a given number from 1 to 20.***************************************************
+
+    // int num = take.nextInt();
+    // for(int i = 1; i <= 20; i++){
+    //     System.out.println(num + " x " + i + " = " + (num * i));
+    // }
+
+
+
+    // Assingment 5:
+    // 5. Write a Java program to calculate the power of a number without using Math.pow().
+    //    Example:
+    //    Input: 2, 5
+    //    Output: 32
+
+    // int base = take.nextInt();
+    // int power = take.nextInt();
+    // int result = 1;
+
+    // for(int i = 1; i <= power; i++){
+    //     result = result * base;
+    // }
+    // System.out.println(result);
 
 
 
     // Assingment 4:
 
-    // 4. Write a Java program to find the factorial of a given number using a for loop.
+    // 4. Write a Java program to find the factorial of a given number using a for loop.************************************************************************
 
-    int  i, num, cout;
+        // int fact = 1;
+        // int num = take.nextInt();
 
-    for(num = 1; num <= 100; num ++){
-        cout = 0;
-        for(i = 2; i <= num/2; i ++){
-            if(num % i == 0){
-                cout++;
-                break;
-            }
-        }
-
-        if(cout == 0 && num != 1){
-            System.out.println(num + "");
-        }
-
-    }
-
+        // for(int i = 1; i <= num; i++){
+        //     fact = fact * i;
+        // }
+        // System.out.println("Factorial :"+fact);
 
 
     // Assingment 3:
-
     // 3. Write a Java program to print all prime numbers between 1 and 100 using a for loop. *********************************************************************************
 
+    // int  i, num, cout;
 
+    // for(num = 1; num <= 100; num ++){
+    //     cout = 0;
+    //     for(i = 2; i <= num/2; i ++){
+    //         if(num % i == 0){
+    //             cout++;
+    //             break;
+    //         }
+    //     }
 
+    //     if(cout == 0 && num != 1){
+    //         System.out.println(num + "");
+    //     }
+
+    // }
 
 
 
     // Assingment 2:
-
     // 2. Write a Java program to print the first 20 even numbers and calculate their sum.
 
     // for(int i = 1; i <= 20; i++){
@@ -179,7 +370,6 @@ class pro
 
 
     // Assingment 1:
-
     // 1. Write a Java program to print all numbers between 1 and 100 that are divisible by both 3 and 5.
 
     // for(int i = 1;i <= 100; i++){
