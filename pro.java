@@ -8,9 +8,9 @@ class pro
 
     //// ternary operator ?: only 3 conditions ////
 
-    // int a = 10, b = 30;
-    // String ans = (a < b)? "hi": "by" ;
-    // System.out.println("ans :"+ ans);
+    //  int a = 10, b = 30;
+    //  String ans = (a < b)? "hi": "by" ;
+    //  System.out.println("ans :"+ ans);
 
 
 
@@ -113,22 +113,25 @@ class pro
 
 
 
-    int n = 5;
 
-    for (int i = 1; i <= n; i++) {
 
-    // spaces
-        for (int j = 1; j <= n - i; j++) {
-        System.out.print(" ");
-        }
 
-    // stars
-        for (int j = 1; j <= 2 * i - 1; j++) {
-        System.out.print("*");
-        }
+    // int n = 5;
 
-    System.out.println();
-    }
+    // for (int i = 1; i <= n; i++) {
+
+    // // spaces
+    //     for (int j = 1; j <= n - i; j++) {
+    //     System.out.print(" ");
+    //     }
+
+    // // stars
+    //     for (int j = 1; j <= 2 * i - 1; j++) {
+    //     System.out.print("*");
+    //     }
+
+    // System.out.println();
+    // }
 
 
 
@@ -464,12 +467,12 @@ class pro
 
     //Ex 3:
 
-    // int count = 3;
-    // while(count > 0){
-    //     System.out.println(count);
-    //     count--;
-    // }
-    // System.out.println("Happy New Year");
+//     int count = 3;
+//     while(count > 0){
+//         System.out.println(count);
+//         count--;
+//     }
+//     System.out.println("Happy New Year");
 
 
 
