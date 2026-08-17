@@ -1,7 +1,6 @@
 import java.util.*;
 
 
-
 // Instructions:
 // 1. Use classes and objects.
 // 2. Use default constructors and parameterized constructors.
@@ -10,6 +9,7 @@ import java.util.*;
 // 5. Create objects in the main() method.
 // 6. Display the required information using methods.
 
+//============================================================================================================================================================================
 
 // 1. Create a class Student with data members:
 //    name, rollNo and marks.
@@ -21,52 +21,52 @@ import java.util.*;
 
 //    Create 2 objects and display their details.
 
-class Student{
+// class Student{
 
-    //data members
-    String name;
-    int rollno;
-    float mark;
+//     //data members
+//     String name;
+//     int rollno;
+//     float mark;
 
-    //default constructor
-    Student(){
-        name = "Vedant";
-        rollno = 256;
-        mark = 98;
-    }
+//     //default constructor
+//     Student(){
+//         name = "Vedant";
+//         rollno = 256;
+//         mark = 98;
+//     }
 
-    //parameteris constructor
-    Student(String StudentName, int RollNo, float Mark){
-        name = StudentName;
-        rollno = RollNo;
-        mark = Mark;        
+//     //parameteris constructor
+//     Student(String StudentName, int RollNo, float Mark){
+//         name = StudentName;
+//         rollno = RollNo;
+//         mark = Mark;        
 
-    }
+//     }
     
 
-    //method of display details 
-    void Display(){
-        System.out.println("Name : " + name);
-        System.out.println("Roll No : " + rollno);
-        System.out.println("Mark : " + mark);
-        System.out.println("===================================");
-    }
+//     //method of display details 
+//     void Display(){
+//         System.out.println("Name : " + name);
+//         System.out.println("Roll No : " + rollno);
+//         System.out.println("Mark : " + mark);
+//         System.out.println("===================================");
+//     }
 
-}
+// }
 
-public class Assingment{
-    public static void main(String [] args){
+// public class Assingment{
+//     public static void main(String [] args){
        
-        Student S1 = new Student();
-        Student S2 = new Student("Vedant", 256, 55);
+//         Student S1 = new Student();
+//         Student S2 = new Student("Vedant", 256, 55);
 
-        S1.Display();
-        S2.Display();
+//         S1.Display();
+//         S2.Display();
 
-    }
-}
+//     }
+// }
 
-
+//============================================================================================================================================================================
 
 // 2. Create a class Employee with data members:
 //    name, employeeId and salary.
@@ -78,6 +78,49 @@ public class Assingment{
 
 //    Create one object using each constructor and display the details.
 
+//     class Employee{
+
+//         // data member
+//         String name;
+//         int employeeId;
+//         int salary;
+        
+//         // default constructor
+//         Employee(){
+//             name = "Vedant";
+//             employeeId = 26967;
+//             salary = 900000;
+//         }
+
+//         // parameterized constructer
+//         Employee(String empName, int empId, int empSalary){
+//             name = empName;
+//             employeeId = empId;
+//             salary = empSalary;
+//         }
+
+//         // method of display details
+
+//         void display(){
+//             System.out.println("Employee Name : " + name);
+//             System.out.println("Employee Id : " + employeeId);
+//             System.out.println("Employee Salary : " + salary);
+//             System.out.println("=========================================");
+//         }
+
+//     }
+
+// public class Assingment{
+//     public static void main( String [] args){
+//         Employee E1 = new Employee();
+//         Employee E2 = new Employee("Ved", 26895, 1900000);
+
+//         E1.display();
+//         E2.display();
+//     }
+// }
+
+//============================================================================================================================================================================
 
 // 3. Create a class BankAccount with data members:
 //    accountNumber, accountHolder and balance.
@@ -91,6 +134,50 @@ public class Assingment{
 
 //    Create objects using both constructors and display the details.
 
+class BankAccount{
+
+    //data members
+    int accNo;
+    String accHolder;
+    int balance;
+
+    //default constructor
+    BankAccount(){
+        accNo = 1001;
+        accHolder = "Unkonown";
+        balance = 0;
+    }
+    
+    //parametrized constructor
+    BankAccount(int accountNo, String accountHolder, int accBalance){
+        accNo = accountNo;
+        accHolder = accountHolder;
+        balance = accBalance;
+    }
+    
+    // method of desplay details
+    void account(){
+        System.out.println("Account No : " + accNo);
+        System.out.println("Account Holder : " + accHolder);
+        System.out.println("Account Balance : " + balance);
+        System.out.println("==============================================");
+    }
+}
+public class Assingment{
+    public static void main( String [] args){
+        BankAccount BankManager1 = new BankAccount();
+        BankAccount BankManager2 = new BankAccount(1002, "vedant", 199999999);
+
+        BankManager1.account();
+        BankManager2.account();
+
+    }
+} 
+
+
+
+
+//============================================================================================================================================================================
 
 // 4. Create a class Book with data members:
 //    title, author and price.
@@ -106,6 +193,7 @@ public class Assingment{
 
 //    Display all details.
 
+//============================================================================================================================================================================
 
 // 5. Create a class Product with data members:
 //    productId, productName and price.
@@ -116,6 +204,7 @@ public class Assingment{
 
 //    Write a method displayProduct() to display the product details.
 
+//============================================================================================================================================================================
 
 // 6. Create a class Car with data members:
 //    brand, model and price.
@@ -129,6 +218,7 @@ public class Assingment{
 //    Also create a method that displays the car whose price is
 //    greater than 10,00,000.
 
+//============================================================================================================================================================================
 
 // 7. Create a class Employee with data members:
 //    name, id, salary and department.
@@ -141,6 +231,7 @@ public class Assingment{
 
 //    Display the details of employees whose salary is greater than 50,000.
 
+//============================================================================================================================================================================
 
 // 8. Create a class Mobile with data members:
 //    brand, model, price and storage.
@@ -154,6 +245,7 @@ public class Assingment{
 //    Create a method that displays whether the mobile is
 //    "Budget" or "Premium" based on its price.
 
+//============================================================================================================================================================================
 
 // 9. Create a class Rectangle with data members:
 //    length and breadth.
@@ -170,6 +262,7 @@ public class Assingment{
 
 //    Display the results.
 
+//============================================================================================================================================================================
 
 // 10. Create a class BankCustomer with data members:
 //     customerName, accountNumber and balance.
@@ -185,6 +278,7 @@ public class Assingment{
 //     - balance >= 50,000 → "Regular Customer"
 //     - otherwise → "Basic Customer"
 
+//============================================================================================================================================================================
 
 // 11. Create a class Laptop with data members:
 //     brand, ram, storage and price.
@@ -197,6 +291,7 @@ public class Assingment{
 
 //     Do not use static or this.
 
+//============================================================================================================================================================================
 
 // 12. Create a class Student with data members:
 //     name, rollNo, marks1, marks2 and marks3.
@@ -210,6 +305,7 @@ public class Assingment{
 //     Create 3 student objects using parameterized constructors
 //     and display the student having the highest percentage.
 
+//============================================================================================================================================================================
 
 // 13. Create a class HospitalPatient with data members:
 //     patientName, patientId, age and billAmount.
@@ -228,6 +324,7 @@ public class Assingment{
 
 //     Display all patient details with their bill status.
 
+//============================================================================================================================================================================
 
 // 14. Create a class Movie with data members:
 //     movieName, director, rating and ticketPrice.
@@ -243,6 +340,7 @@ public class Assingment{
 
 //     Also calculate the total ticket price of all movies.
 
+//============================================================================================================================================================================
 
 // 15. CHALLENGE QUESTION
 
