@@ -21,50 +21,51 @@ import java.util.*;
 
 //    Create 2 objects and display their details.
 
-// class Student{
+class Student{
 
-//     //data members
-//     String name;
-//     int rollno;
-//     float mark;
+    //data members
+    String name;
+    int rollno;
+    float mark;
 
-//     //default constructor
-//     Student(){
-//         name = "Vedant";
-//         rollno = 256;
-//         mark = 98;
-//     }
+    //default constructor
+    Student(){
+        name = "Vedant";
+        rollno = 256;
+        mark = 98;
+    }
 
-//     //parameteris constructor
-//     Student(String StudentName, int RollNo, float Mark){
-//         name = StudentName;
-//         rollno = RollNo;
-//         mark = Mark;        
+    //parameteris constructor
+    Student(String StudentName, int RollNo, float Mark){
+        name = StudentName;
+        rollno = RollNo;
+        mark = Mark;        
 
-//     }
+    }
     
 
-//     //method of display details 
-//     void Display(){
-//         System.out.println("Name : " + name);
-//         System.out.println("Roll No : " + rollno);
-//         System.out.println("Mark : " + mark);
-//         System.out.println("===================================");
-//     }
+    //method of display details 
+    void Display(){
+        System.out.println("Name : " + name);
+        System.out.println("Roll No : " + rollno);
+        System.out.println("Mark : " + mark);
+        System.out.println("===================================");
+    }
 
-// }
+}
 
-// public class Assingment{
-//     public static void main(String [] args){
+public class Assingment{
+    public static void main(String [] args){
        
-//         Student S1 = new Student();
-//         Student S2 = new Student("Vedant", 256, 55);
+        Student S1 = new Student();
+        Student S2 = new Student("Vedant", 256, 55);
 
-//         S1.Display();
-//         S2.Display();
+        S1.Display();
+        S2.Display();
 
-//     }
-// }
+    }
+}
+
 
 //============================================================================================================================================================================
 
@@ -78,47 +79,49 @@ import java.util.*;
 
 //    Create one object using each constructor and display the details.
 
-//     class Employee{
+    class Employee{
 
-//         // data member
-//         String name;
-//         int employeeId;
-//         int salary;
+        // data member
+        String name;
+        int employeeId;
+        int salary;
         
-//         // default constructor
-//         Employee(){
-//             name = "Vedant";
-//             employeeId = 26967;
-//             salary = 900000;
-//         }
+        // default constructor
+        Employee(){
+            name = "Vedant";
+            employeeId = 26967;
+            salary = 900000;
+        }
 
-//         // parameterized constructer
-//         Employee(String empName, int empId, int empSalary){
-//             name = empName;
-//             employeeId = empId;
-//             salary = empSalary;
-//         }
+        // parameterized constructer
+        Employee(String empName, int empId, int empSalary){
+            name = empName;
+            employeeId = empId;
+            salary = empSalary;
+        }
 
-//         // method of display details
+        // method of display details
 
-//         void display(){
-//             System.out.println("Employee Name : " + name);
-//             System.out.println("Employee Id : " + employeeId);
-//             System.out.println("Employee Salary : " + salary);
-//             System.out.println("=========================================");
-//         }
+        void display(){
+            System.out.println("Employee Name : " + name);
+            System.out.println("Employee Id : " + employeeId);
+            System.out.println("Employee Salary : " + salary);
+            System.out.println("=========================================");
+        }
 
-//     }
+    }
 
-// public class Assingment{
-//     public static void main( String [] args){
-//         Employee E1 = new Employee();
-//         Employee E2 = new Employee("Ved", 26895, 1900000);
+public class Assingment{
+    public static void main( String [] args){
+        Employee E1 = new Employee();
+        Employee E2 = new Employee("Ved", 26895, 1900000);
 
-//         E1.display();
-//         E2.display();
-//     }
-// }
+        E1.display();
+        E2.display();
+    }
+}
+
+
 
 //============================================================================================================================================================================
 
@@ -146,6 +149,7 @@ class BankAccount{
         accNo = 1001;
         accHolder = "Unkonown";
         balance = 0;
+
     }
     
     //parametrized constructor
@@ -175,8 +179,6 @@ public class Assingment{
 } 
 
 
-
-
 //============================================================================================================================================================================
 
 // 4. Create a class Book with data members:
@@ -193,6 +195,49 @@ public class Assingment{
 
 //    Display all details.
 
+class Book{
+    // data members
+    String title;
+    String author;
+    int price;
+    
+    // default constructor
+    Book(){
+        title = "The Nobel";
+        author = "Mical Word";
+        price = 2500;
+    }
+
+    // parameterized constructer
+    Book(String BookTitle, String BookAuthor, int BookPrice){
+        title = BookTitle;
+        author = BookAuthor;
+        price = BookPrice;
+    }
+
+    // method of display details
+    void display(){
+        System.out.println("Book Title : " + title);
+        System.out.println("Book Author : " + author);
+        System.out.println("Book Price : " + price);
+        System.out.println("===========================================");
+    }
+}
+
+public class Assingment{
+    public static void main(String [] args){
+
+        Book B1 = new Book();
+        Book B2 = new Book("Moon Time", "Astor Ment", 5250);
+        Book B3 = new Book("Agresive Mind", "Mild Optic", 2500);
+
+        B1.display();
+        B2.display();
+        B3.display();
+    }
+}
+
+
 //============================================================================================================================================================================
 
 // 5. Create a class Product with data members:
@@ -203,6 +248,47 @@ public class Assingment{
 //    Create 3 objects using different constructors.
 
 //    Write a method displayProduct() to display the product details.
+
+    class Product{
+        //data members
+        int productId;
+        String productName;
+        int productPrice;
+        
+        // default constructor
+        Product(){
+            productId = 2655;
+            productName = "OnePlus 4";
+            productPrice = 25000;
+        }
+
+        //parametarized constructor
+        Product(int proId, String proName, int proPrice){
+            productId = proId;
+            productName = proName;
+            productPrice = proPrice;
+        }
+
+        // method of display details
+        void display(){
+            System.out.println("Product ID : " + productId);
+            System.out.println("Product Name : " + productName);
+            System.out.println("Product Price : " + productPrice);
+            System.out.println("==========================================");
+        }
+    }
+
+    public class Assingment{
+        public static void main(String [] args){
+
+            Product P1 = new Product();
+            Product P2 = new Product(4568, "Realme 10", 56200);
+
+            P1.display();
+            P2.display();
+        }
+    }
+
 
 //============================================================================================================================================================================
 
@@ -218,6 +304,43 @@ public class Assingment{
 //    Also create a method that displays the car whose price is
 //    greater than 10,00,000.
 
+class Car{
+    //data members
+    String brand;
+    String model;
+    int price;
+    //default constructor
+    Car(){
+        brand = "Tayota";
+        model = "Land Cruser";
+        price = 600000;
+    }
+    //parametarized constructor
+    Car(String carBrand, String carModel, int carPrice){
+        brand = carBrand;
+        model = carModel;
+        price = carPrice;
+    }
+    //method of display details
+    void dcar(){
+        System.out.println("Car Brand : " + brand);
+        System.out.println("Car Model : " + model);
+        System.out.println("Car price : " + price);
+        System.out.println("===============================================");
+
+    }
+}
+public class Assingment{
+    public static void main(String [] args){
+        Car C1 = new Car();
+        Car C2 = new Car("Audi","R8",580000000);
+
+        C1.dcar();
+        C2.dcar();
+    }
+}
+
+
 //============================================================================================================================================================================
 
 // 7. Create a class Employee with data members:
@@ -230,6 +353,47 @@ public class Assingment{
 //    Create 5 employee objects.
 
 //    Display the details of employees whose salary is greater than 50,000.
+
+class Employee{
+    //data members
+    String name;
+    int id;
+    int salary;
+    String department;
+    //default constructor
+    Employee(){
+        name = "Piyu";
+        id = 2655;
+        salary = 2500000;
+        department = "Civil";
+    }
+    //parameterized constructor
+    Employee(String empName, int empId, int empSalary, String empDepartment){
+        name = empName;
+        id = empId;
+        salary = empSalary;
+        department = empDepartment;
+    }
+    // method of display details
+    void demp(){
+        System.out.println("Employee Name : " + name);
+        System.out.println("Employee ID : " + id);
+        System.out.println("Employee Salary : " + salary);
+        System.out.println("Employee Department : " + department);
+        System.out.println("======================================");
+    }
+}
+public class Assingment{
+    public static void main(String [] args){
+        
+        Employee E1 = new Employee();
+        Employee E2 = new Employee("Suju", 26558, 5829900, "Electrical");
+
+        E1.demp();
+        E2.demp();
+    }
+}
+
 
 //============================================================================================================================================================================
 
