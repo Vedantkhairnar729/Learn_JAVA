@@ -364,7 +364,7 @@ class Employee{
     Employee(){
         name = "Piyu";
         id = 2655;
-        salary = 2500000;
+        salary = 500000;
         department = "Civil";
     }
     //parameterized constructor
@@ -382,15 +382,38 @@ class Employee{
         System.out.println("Employee Department : " + department);
         System.out.println("======================================");
     }
+
+
 }
 public class Assingment{
     public static void main(String [] args){
         
         Employee E1 = new Employee();
-        Employee E2 = new Employee("Suju", 26558, 5829900, "Electrical");
+        Employee E2 = new Employee("Vedant", 101, 600000, "IT");
+        Employee E3 = new Employee("Rahul", 102, 45000, "HR");
+        Employee E4 = new Employee("Amit", 103, 75000, "Finance");
+        Employee E5 = new Employee("Priya", 104, 50000, "IT");
+        Employee E6 = new Employee("Sneha", 105, 90000, "Marketing");
 
-        E1.demp();
-        E2.demp();
+        //Display employee whose salary is greater than 50,000
+        if (E1.salary > 50000){
+            E1.demp();
+        }
+        if (E2.salary > 50000){
+            E2.demp();
+        }
+        if (E3.salary > 50000){
+            E3.demp();
+        }
+        if (E4.salary > 50000){
+            E4.demp();
+        }
+        if (E5.salary > 50000){
+            E5.demp();
+        }
+        if (E6.salary > 50000){
+            E6.demp();
+        }
     }
 }
 
@@ -409,6 +432,59 @@ public class Assingment{
 //    Create a method that displays whether the mobile is
 //    "Budget" or "Premium" based on its price.
 
+class Mobile{
+    String brand;
+    String model;
+    int price;
+    int storage;
+
+    Mobile(){
+        brand = "Oppo";
+        model = "R8";
+        price = 15000;
+        storage = 125;
+    }
+    
+    Mobile(String mobileBrand, String mobileModel, int mobilePrice, int mobileStorage){
+        brand = mobileBrand;
+        model = mobileModel;
+        price = mobilePrice;
+        storage = mobileStorage;
+    }
+    
+    void cardetails(){
+        System.out.println("Mobile Brand : " + brand);
+        System.out.println("Mobile Model : " + model);
+        System.out.println("Mobile Price : " + price);
+        System.out.println("Mobile Storage : " + storage + "GB");
+        System.out.println("========================================");
+
+    }
+
+    void range(){
+        if(price <= 20000){
+            System.out.println("Category : Budget");
+        }
+        else{
+            System.out.println("Category : Premium");
+        }
+    }
+}
+
+public class Assingment{
+    public static void main(String [] args){
+        Mobile M1 = new Mobile();
+        Mobile M2 = new Mobile("Vivo", "T3x", 35022, 256);
+        
+        M1.range();
+        M1.cardetails();
+       
+        M2.range();
+        M2.cardetails();
+    }
+}
+
+
 //============================================================================================================================================================================
 
 // 9. Create a class Rectangle with data members:
@@ -425,6 +501,48 @@ public class Assingment{
 //    - Perimeter
 
 //    Display the results.
+
+class Rectangle {
+    int length;
+    int breadth;
+
+    Rectangle(){
+        length = 6;
+        breadth = 9;
+    }
+    Rectangle(int recLength, int recBreadth){
+        length = recLength;
+        breadth = recBreadth;
+    }
+
+    void displayAngle(){
+        System.out.println("Length : " + length);
+        System.out.println("Breadth : " + breadth);
+        System.out.println("=======================================");
+    }
+
+    double calcArea(){
+        return length * breadth;
+    }
+    double calcPara(){
+        return 2 * (length + breadth);
+    }
+}
+public class Assingment{
+    public static void main(String [] args){
+        Rectangle R1 = new Rectangle();
+        Rectangle R2 = new Rectangle(10,5);
+
+        R1.displayAngle();
+        System.out.println("Area : " + R1.calcArea());
+        System.out.println("Perimeter : " + R1.calcPara());
+
+        R2.displayAngle();
+        System.out.println("Area : " + R2.calcArea());
+        System.out.println("Perimeter : " + R2.calcPara());
+    }
+}
+
 
 //============================================================================================================================================================================
 
@@ -545,3 +663,70 @@ public class Assingment{
 
 //     10. Do NOT use static keyword.
 //         Do NOT use this keyword.
+
+class Employee{
+
+    String name;
+    int employeeId;
+    String department;
+    int salary;
+    int experience;
+
+    Employee(){
+        name = "suju";
+        employeeId = 1578;
+        department = "Electric";
+        salary = 58625;
+        experience = 22;
+    }
+    Employee(String empName, int empId, String empDepartment, int empSalary, int empExpe){
+        name = empName;
+        employeeId = empId;
+        department = empDepartment;
+        salary = empSalary;
+        experience = empExpe;
+    }
+    void desplayEmployee(){
+        System.out.println("Employee Name : " + name);
+        System.out.println("Employee ID : " + employeeId);
+        System.out.println("Employee Department : " + department);
+        System.out.println("Employee Salary : " + salary);
+        System.out.println("Employee Experience " + experience + " Years");
+        System.out.println("==================================================");
+    }
+     
+    // Calculate bonus
+    double calculateBonus(){
+        if(experience >= 10){
+            return salary * 0.20;
+        }
+        else if (experience >= 5){
+            return salary * 0.15;
+        }
+        else{
+            return salary * 0.10;
+        }
+    }
+}
+
+public class Assingment{
+    public static void main(String [] args){
+
+        Employee E1 = new Employee();
+
+        Employee E2 = new Employee("Vedant", 101, "IT", 90000, 6);
+        Employee E3 = new Employee("Rahul", 102, "HR", 75000, 4);
+        Employee E4 = new Employee("Amit", 103, "Finance", 120000, 12);
+        Employee E5 = new Employee("Priya", 104, "IT", 95000, 8);
+        Employee E6 = new Employee("Sneha", 105, "Marketing", 60000, 3);
+
+        E1.desplayEmployee();
+        E2.desplayEmployee();
+        E3.desplayEmployee();
+        E4.desplayEmployee();
+        E5.desplayEmployee();
+        E6.desplayEmployee();
+        
+
+    }
+}
