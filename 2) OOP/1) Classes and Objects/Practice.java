@@ -50,7 +50,7 @@ class Student{
 
 }
 
-public class Assignment{
+public class Practice{
     public static void main(String [] args){
        
         Student S1 = new Student();
@@ -117,7 +117,7 @@ class Employee{
 
 }
 
-public class Assignment{
+public class Practice{
     public static void main( String [] args){
         Employee E1 = new Employee();
         Employee E2 = new Employee("Ved", 26895, 1900000);
@@ -182,7 +182,7 @@ class BankAccount{
         System.out.println("==============================================");
     }
 }
-public class Assignment{
+public class Practice{
     public static void main( String [] args){
         BankAccount bankManager1 = new BankAccount();
         BankAccount bankManager2 = new BankAccount(1002, "vedant", 199999999);
@@ -250,7 +250,7 @@ class Book{
     }
 }
 
-public class Assignment{
+public class Practice{
     public static void main(String [] args){
 
         Book B1 = new Book();
@@ -319,7 +319,7 @@ class Product{
     }
 }
 
-public class Assignment{
+public class Practice{
     public static void main(String [] args){
 
         Product P1 = new Product();
@@ -391,7 +391,7 @@ class Car{
     }
     
 }
-public class Assignment{
+public class Practice{
     public static void main(String [] args){
         Car C1 = new Car();
         Car C2 = new Car("Audi","R8",580000000);
@@ -468,7 +468,7 @@ class Employee{
     }
 
 }
-public class Assignment{
+public class Practice{
     public static void main(String [] args){
         
         Employee E1 = new Employee();
@@ -552,7 +552,7 @@ class Mobile{
     }
 }
 
-public class Assignment{
+public class Practice{
     public static void main(String [] args){
         Mobile M1 = new Mobile();
         Mobile M2 = new Mobile("Vivo", "T3x", 35022, 256);
@@ -624,7 +624,7 @@ class Rectangle {
         return 2 * (length + breadth);
     }
 }
-public class Assignment{
+public class Practice{
     public static void main(String [] args){
         Rectangle R1 = new Rectangle();
         Rectangle R2 = new Rectangle(10,5);
@@ -704,7 +704,7 @@ class BankCustomer{
         System.out.println("====================================================");
     }
 }
-public class Assignment{
+public class Practice{
     public static void main(String [] args){
         BankCustomer b1 = new BankCustomer("Vedant", 26058488, 100000);
         BankCustomer b2 = new BankCustomer("Avi", 26058499, 50000);
@@ -783,7 +783,7 @@ class Laptop{
     }
 }
 
-public class Assignment{
+public class Practice{
     public static void main(String [] args){
 
         Laptop l1 = new Laptop("HP", 8, 512, 53000);
@@ -862,7 +862,7 @@ class Student{
         return (mark1 + mark2 + mark3) / 3.0;
     }
 }
-public class Assignment{
+public class Practice{
     public static void main(String [] args){
     
         Student s1 = new Student("Vedant", 101, 85, 90, 88);
@@ -949,7 +949,7 @@ class HospitalPatient{
         System.out.println("=====================================");
     }
 }
-public class Assignment{
+public class Practice{
     public static void main(String [] args){
         HospitalPatient h1 = new HospitalPatient();
         HospitalPatient h2 = new HospitalPatient("Suju", 102, 23, 1500);
@@ -1044,7 +1044,7 @@ class Movie{
         }
     }
 }
-public class Assignment{
+public class Practice{
     public static void main(String [] args){
         Movie m1 = new Movie();
         Movie m2 = new Movie("The Godfather", "Francis Ford", 7.5, 1000);
@@ -1181,7 +1181,7 @@ class Employee{
     }
 }
 
-public class Assignment{
+public class Practice{
     public static void main(String [] args){
 
         Employee E1 = new Employee();
