@@ -2,7 +2,12 @@ class car{
     String name;
     String model;
     int price;
+
+    
+    //Simple definition
+    //static means the member belongs to the class, rather than to individual objects.
     static String colour = "White";
+
 
     car(){
         name = "R8";
@@ -11,6 +16,17 @@ class car{
     }
 
     car(String name, String model, int price){
+
+    // this keyword
+    //Simple definition
+    //this refers to the current object.
+
+    // Refers to current object
+    // Used with object members
+    // Works in non-static context
+    // Different for each object
+    // Cannot be used in static context
+
         this.name = name;
         this.model = model;
         this.price = price;
