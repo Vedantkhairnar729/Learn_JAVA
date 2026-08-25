@@ -12,7 +12,7 @@
 //     int EmployeeId;
 //     String EmployeeName;
     
-//     static String CompanyName = "HCL";
+//     static String CompanyName = "HCL";  //-------------------------------------------------------------------
 
 //     Employee(int EmpId, String EmpName){
 //         EmpId = EmployeeId;
@@ -39,7 +39,7 @@
 //     // change company name
 //     //Changing static variable
 
-//     Employee.CompanyName = "TCS"; // ============================================================
+//     Employee.CompanyName = "TCS"; //--------------------------------------------------------------------
 
 //         e1.desk();
 //         e2.desk();
@@ -83,13 +83,13 @@
 //     int roll;
 //     String name;
 
-//     static int StudentCount = 0;
+//     static int StudentCount = 0; // ----------------------------------------------------------------
 
 //     Student(int roll, String name){
 //         this.roll = roll;
 //         this.name = name;
 
-//         StudentCount++;
+//         StudentCount++;  //----------------------------------------------------------------------
 //     }
 //     void desk(){
 //         System.out.println("Student Roll No : " + roll);
@@ -112,7 +112,7 @@
 //         s4.desk();
 //         s5.desk();
 
-//         System.out.println("Student Counts in total : " + Student.StudentCount);   
+//         System.out.println("Student Counts in total : " + Student.StudentCount); //----------------------------------------------------
 
 //     }
 // }
@@ -146,13 +146,13 @@
 //     String custName;
 //     int accNo;
 
-//     static int nextAccNo = 1001;
+//     static int nextAccNo = 1001; // -----------------------------------------------------------------------------------------------
 
 //     BankAccount(String custName){
 //         this.accNo = nextAccNo;
 //         this.custName = custName;
 
-//         nextAccNo++;
+//         nextAccNo++; // --------------------------------------------------------------------------------------------------------------
 //     }
     
 //     void desk(){
@@ -200,7 +200,7 @@
 // Create a Calculator class containing static methods for addition, subtraction, multiplication, division, 
 // and finding the square of a number. Call all methods without creating an object.
 
-// class Calculator{
+// class Calculator{  //---------------------------------------------------------------------------------------------------------------------------------------
     
 //     static int addition(int a, int b){
 //         return a + b;
@@ -284,11 +284,83 @@
 // Create an Employee class with id, name, and salary. Create a method that accepts new employee details and uses 
 // the this keyword to distinguish instance variables from local variables.
 
+// class Employee{
+//     int Id;
+//     String name;
+//     int salary;
+
+//     void setDetails(int Id, String name, int salary){  // ------------------------------------------------------------------------------
+//         this.Id = Id;
+//         this.name = name;
+//         this.salary = salary;
+//     }
+//     void display(){              // --------------------------------------------------------------------------------------
+//         System.out.println("Employee ID : " + Id);
+//         System.out.println("Employee Name : " + name);
+//         System.out.println("Employee Salary : " + salary);
+//         System.out.println();
+//     }    
+// }
+// public class Practice{
+//     public static void main(String [] args){
+//         Employee e1 = new Employee();
+
+//         e1.setDetails(150, "Ani", 900000);
+//         e1.display();
+//     }
+// }
+
+// Output //
+
+// Employee ID : 150
+// Employee Name : Ani
+// Employee Salary : 900000
+
 //===========================================================================================================================================================================//
 
 // 7. Product Class Using this
 // Create a Product class with productId, productName, price, and quantity. Create a parameterized constructor 
 // using this. Add a method to calculate and display the total price.
+
+// class Product{
+//     int productId;
+//     String productName;
+//     int price;
+//     int quantity;
+
+//     Product(int productId, String productName, int price, int quantity){
+//         this.productId = productId;
+//         this.productName = productName;
+//         this.price = price;
+//         this.quantity = quantity;
+
+//     }
+//     void display(){
+
+//         double total = price * quantity;        // --------------------------------------------------------------------------------------------
+
+//         System.out.println("Product ID : " + productId);
+//         System.out.println("Product Name : " + productName);
+//         System.out.println("Product Price : " + price);
+//         System.out.println("Quantity : " + quantity);
+//         System.out.println("Total price : " + total);
+//     }
+// }
+// public class Practice{
+//     public static void main(String [] args){
+//         Product p1 = new Product(26012, "Fan", 1500, 7);
+
+//         p1.display();
+//     }
+// }
+
+// Output //
+
+// Product ID : 26012
+// Product Name : Fan
+// Product Price : 1500
+// Quantity : 7
+// Total price : 10500.0
 
 //===========================================================================================================================================================================//
 
@@ -299,12 +371,159 @@
 // - Constructor accepting brand, model, and price
 // Use this() to call one constructor from another.
 
+// class Mobile{
+//     String brand;
+//     String model;
+//     int price;
+
+//     Mobile(){
+//         this("Oppo", "A34", 15000);
+       
+//     }
+//     Mobile( String brand){
+//         this(brand, "T3x",40000);
+        
+//     }
+//     Mobile(String brand, String model, int price){
+//         this.brand = brand;
+//         this.model = model;
+//         this.price = price;
+//     }
+//     void display(){
+//         System.out.println("Mobile Brand : " + brand);
+//         System.out.println("Mobile Model : " + model);
+//         System.out.println("Mobile Price : " + price);
+//         System.out.println();
+        
+//     }
+
+// }
+// public class Practice{
+//     public static void main(String [] args){
+//         Mobile m1 = new Mobile();
+//         Mobile m2 = new Mobile("Vivo");
+//         Mobile m3 = new Mobile("Iphone", "18 pro", 150000);
+//         Mobile m4 = new Mobile("OnePlus", "15", 30000);
+
+//         m1.display();
+//         m2.display();
+//         m3.display();
+//         m4.display();
+//     }
+// }
+
+// Output //
+
+// Mobile Brand : Oppo
+// Mobile Model : A34
+// Mobile Price : 15000
+
+// Mobile Brand : Vivo
+// Mobile Model : T3x
+// Mobile Price : 40000
+
+// Mobile Brand : Iphone
+// Mobile Model : 18 pro
+// Mobile Price : 150000
+
+// Mobile Brand : OnePlus
+// Mobile Model : 15
+// Mobile Price : 30000
+
 //===========================================================================================================================================================================//
 
 // 9. Employee and Developer
 // Create a base class Employee containing id, name, and salary. Create a derived class Developer containing 
 // programmingLanguage and projectName. Display all employee and developer details.
 
+// class Employee{
+//     int id;
+//     String name;
+//     int salary;
+
+//     Employee(int id, String name, int salary){
+//         this.id = id;
+//         this.name = name;
+//         this.salary = salary;
+//     }
+
+//     void employeeDetails(){
+//         System.out.println("Employee ID : " + id);
+//         System.out.println("Employee Name : " + name);
+//         System.out.println("Employee Salary : " + salary);
+//         System.out.println();
+        
+//     }
+// }
+
+// class Developer extends Employee{
+//     String programmingLanguage;
+//     String projectName;
+  
+//     Developer(int id, String name, int salary, String programmingLanguage, String projectName){
+       
+//         super(id,name,salary); // --------------------------------------------------------------------------------
+       
+//         this.programmingLanguage = programmingLanguage;
+//         this.projectName = projectName;
+//     }
+
+//     void developerDetails(){
+
+//         employeeDetails(); // --------------------------------------------------------------------------
+
+//         System.out.println("Programming Language : " + programmingLanguage);
+//         System.out.println("Project Name : " + projectName);
+//         System.out.println("======================================================");
+//     }
+// }
+
+// public class Practice{
+//     public static void main(String [] args){
+
+//         Developer d1 = new Developer(
+//             101, "Avi", 15000, "Java", "Banking System"
+//         );
+
+//         Developer d2 = new Developer(
+//             102, "Ani", 700000, "C", "Railway System"
+//         );
+
+//         Developer d3 = new Developer(
+//             103, "Guru", 40000, "Python", "AI Project"
+//         );
+
+      
+//         d1.developerDetails();
+//         d2.developerDetails();
+//         d3.developerDetails();
+
+//     }
+// }
+
+// Output //
+
+// Employee ID : 101
+// Employee Name : Avi
+// Employee Salary : 15000
+
+// Programming Language : Java
+// Project Name : Banking System
+// ======================================================
+// Employee ID : 102
+// Employee Name : Ani
+// Employee Salary : 700000
+
+// Programming Language : C
+// Project Name : Railway System
+// ======================================================
+// Employee ID : 103
+// Employee Name : Guru
+// Employee Salary : 40000
+
+// Programming Language : Python
+// Project Name : AI Project
+// ======================================================
 //===========================================================================================================================================================================//
 
 // 10. Vehicle and Car
