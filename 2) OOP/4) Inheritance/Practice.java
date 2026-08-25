@@ -530,11 +530,128 @@
 // Create a Vehicle class with brand, model, and speed. Create a Car class that inherits from Vehicle and adds 
 // fuelType and numberOfDoors. Display all information.
 
+// class Vehicle{
+//     String brand;
+//     String model;
+//     int speed;
+
+//     Vehicle(String brand, String model, int speed){
+//         this.brand = brand;
+//         this.model = model;
+//         this.speed = speed;
+//     }
+
+//     void vdisplay(){
+//         System.out.println("Car Brand : " + brand);
+//         System.out.println("Car Model : " + model);
+//         System.out.println("Car Speed : " + speed);
+//     }
+// }
+
+// class Car extends Vehicle{
+//     String fuleType;
+//     int numberOfDoors;
+
+//     Car(String brand, String model, int speed, String fuleType, int numberOfDoors){
+
+//     super(brand,model,speed);
+
+//     this.fuleType = fuleType;
+//     this.numberOfDoors = numberOfDoors;
+
+//     }
+
+//     void cdisplay(){
+
+//         vdisplay();
+
+//         System.out.println("Car Fule Type : " + fuleType);
+//         System.out.println("Car Number Of Doors : " + numberOfDoors);
+//         System.out.println();
+//     }
+// }
+
+// public class Practice{
+//     public static void main(String [] args){
+//         Car c1 = new Car("Tayota", "Fourtuner", 180, "Diesel",5);
+
+//         c1.cdisplay();
+//     }
+// }
+
+// Output //
+
+// Car Brand : Tayota
+// Car Model : Fourtuner
+// Car Speed : 180
+// Car Fule Type : Diesel
+// Car Number Of Doors : 5
+
 //===========================================================================================================================================================================//
 
 // 11. Bank Account and Savings Account
 // Create a BankAccount class with accountNumber, holderName, and balance. Create a SavingsAccount class that 
 // inherits from BankAccount and adds interestRate. Create a method to calculate and display interest.
+
+class BankAccount{
+    int accountNumber;
+    String holderName;
+    double balance;
+
+    BankAccount(int accountNumber, String holderName, double balance){
+        this.accountNumber = accountNumber;
+        this.holderName = holderName;
+        this.balance = balance;
+    }
+
+    void accountDetails(){
+        System.out.println("Account Number : " + accountNumber);
+        System.out.println("Account Holder Name : " + holderName);
+        System.out.println("Account Balance : " + balance);
+
+    }
+}
+
+class SavingsAccount extends BankAccount{
+
+    double interestRate;
+
+    SavingsAccount(int accountNumber, String holderName, double balance, double interestRate){
+
+        super(accountNumber, holderName, balance);
+
+        this.interestRate = interestRate;
+       
+    }
+
+    void calculateInterest(){
+       
+        double interest = (balance * interestRate) / 100;
+
+        accountDetails();
+
+        System.out.println("Interest Rate : " + interestRate + "%");
+        System.out.println("Interest : " + interest);
+
+    }
+}
+
+public class Practice{
+    public static void main(String [] args){
+        SavingsAccount s1 = new SavingsAccount(102, "Ani", 98000, 7.5);
+
+        s1.calculateInterest();
+    }
+}
+
+// Output //
+
+Account Number : 102
+Account Holder Name : Ani
+Account Balance : 98000.0
+Interest Rate : 7.5%
+Interest : 7350.0
+
 
 //===========================================================================================================================================================================//
 
