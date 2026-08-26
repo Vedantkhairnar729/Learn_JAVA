@@ -376,11 +376,11 @@
 //     String model;
 //     int price;
 
-//     Mobile(){
+//     Mobile(){                        // ---------------------------------------------------------------------------
 //         this("Oppo", "A34", 15000);
        
 //     }
-//     Mobile( String brand){
+//     Mobile( String brand){           //-----------------------------------------------------------------------------
 //         this(brand, "T3x",40000);
         
 //     }
@@ -593,64 +593,64 @@
 // Create a BankAccount class with accountNumber, holderName, and balance. Create a SavingsAccount class that 
 // inherits from BankAccount and adds interestRate. Create a method to calculate and display interest.
 
-class BankAccount{
-    int accountNumber;
-    String holderName;
-    double balance;
+// class BankAccount{
+//     int accountNumber;
+//     String holderName;
+//     double balance;
 
-    BankAccount(int accountNumber, String holderName, double balance){
-        this.accountNumber = accountNumber;
-        this.holderName = holderName;
-        this.balance = balance;
-    }
+//     BankAccount(int accountNumber, String holderName, double balance){
+//         this.accountNumber = accountNumber;
+//         this.holderName = holderName;
+//         this.balance = balance;
+//     }
 
-    void accountDetails(){
-        System.out.println("Account Number : " + accountNumber);
-        System.out.println("Account Holder Name : " + holderName);
-        System.out.println("Account Balance : " + balance);
+//     void accountDetails(){
+//         System.out.println("Account Number : " + accountNumber);
+//         System.out.println("Account Holder Name : " + holderName);
+//         System.out.println("Account Balance : " + balance);
 
-    }
-}
+//     }
+// }
 
-class SavingsAccount extends BankAccount{
+// class SavingsAccount extends BankAccount{
 
-    double interestRate;
+//     double interestRate;
 
-    SavingsAccount(int accountNumber, String holderName, double balance, double interestRate){
+//     SavingsAccount(int accountNumber, String holderName, double balance, double interestRate){
 
-        super(accountNumber, holderName, balance);
+//         super(accountNumber, holderName, balance);
 
-        this.interestRate = interestRate;
+//         this.interestRate = interestRate;
        
-    }
+//     }
 
-    void calculateInterest(){
+//     void calculateInterest(){
        
-        double interest = (balance * interestRate) / 100;
+//         double interest = (balance * interestRate) / 100;
 
-        accountDetails();
+//         accountDetails();
 
-        System.out.println("Interest Rate : " + interestRate + "%");
-        System.out.println("Interest : " + interest);
+//         System.out.println("Interest Rate : " + interestRate + "%");
+//         System.out.println("Interest : " + interest);
 
-    }
-}
+//     }
+// }
 
-public class Practice{
-    public static void main(String [] args){
-        SavingsAccount s1 = new SavingsAccount(102, "Ani", 98000, 7.5);
+// public class Practice{
+//     public static void main(String [] args){
+//         SavingsAccount s1 = new SavingsAccount(102, "Ani", 98000, 7.5);
 
-        s1.calculateInterest();
-    }
-}
+//         s1.calculateInterest();
+//     }
+// }
 
 // Output //
 
-Account Number : 102
-Account Holder Name : Ani
-Account Balance : 98000.0
-Interest Rate : 7.5%
-Interest : 7350.0
+// Account Number : 102
+// Account Holder Name : Ani
+// Account Balance : 98000.0
+// Interest Rate : 7.5%
+// Interest : 7350.0
 
 
 //===========================================================================================================================================================================//
@@ -659,14 +659,159 @@ Interest : 7350.0
 // Create a Person class with name, age, and city. Create a Student class that inherits from Person and adds rollNo, course, and marks. 
 // Display complete student information.
 
+// class Person{
+//     String name;
+//     int age;
+//     String city;
+
+//     Person(String name, int age, String city){
+//         this.name = name;
+//         this.age = age;
+//         this.city = city;
+//     }
+
+//     void desk(){
+//         System.out.println("Student Name : " + name);
+//         System.out.println("Student Age : " + age);
+//         System.out.println("Student City : " + city);
+//     }
+// }
+
+// class Student extends Person{
+//     int rollNo;
+//     String course;
+//     int marks;
+
+//     Student(String name, int age, String city, int rollNo, String course, int marks){
+
+//         super(name, age, city);
+
+//         this.rollNo = rollNo;
+//         this.course = course;
+//         this.marks = marks;    
+
+//     }
+
+//     void display(){
+
+//         desk();
+
+//         System.out.println("Student Roll No : " + rollNo);
+//         System.out.println("Student Course Name : " + course);
+//         System.out.println("Student Marks : " + marks);
+//         System.out.println();
+//     }
+// }
+
+// public class Practice{
+//     public static void main(String [] args){
+//         Student s1 = new Student("Ani", 22, "Pune", 102, "CSE", 85);
+
+//         s1.display();
+//     }
+// }
+
+// Output // 
+
+// Student Name : Ani
+// Student Age : 22
+// Student City : Pune
+// Student Roll No : 102
+// Student Course Name : CSE
+// Student Marks : 85
+
 //===========================================================================================================================================================================//
 
-// 13. Person -> Employee -> Manager
+// 13. Person -> Employee -> Managernn
 // Create three classes:
 // Person -> name, age
 // Employee -> employeeId, salary
 // Manager -> department, teamSize
 // Use multilevel inheritance. Create a Manager object and display all details.
+
+
+// class Person {
+
+//     String name; 
+//     int age;
+
+//     Person(String name, int age) {
+
+//     //veriable       //Parameter use anywere   -------------------------------------------------------------------
+//         this.name = name;         
+//         this.age = age;
+//     }
+
+//     void desk_1() {
+
+//         System.out.println("Person Name : " + name);
+//         System.out.println("Person Age : " + age);
+//     }
+// }
+
+// class Employee extends Person {
+
+//     int empId;
+//     int empSalary;
+
+//     Employee(String name, int age, int empId, int empSalary) {
+
+//         super(name, age);
+
+//         this.empId = empId;
+//         this.empSalary = empSalary;
+//     }
+
+//     void desk_2() {
+
+//         desk_1();
+
+//         System.out.println("Employee ID : " + empId);
+//         System.out.println("Employee Salary : " + empSalary);
+
+//     }
+// }
+
+// class Manager extends Employee {
+
+//     String department;
+//     int teamSize;
+
+//     Manager(String name, int age, int empId, int empSalary, String department, int teamSize) {
+
+//         super(name, age, empId, empSalary);
+
+//         this.department = department;
+//         this.teamSize = teamSize;
+
+//     }
+
+//     void desk_3() {
+        
+//         desk_2();
+
+//         System.out.println("Employee Department : " + department);
+//         System.out.println("Employee Team Size : " + teamSize);
+
+//     }
+// }
+
+// public class Practice {
+//     public static void main(String [] args) {
+//         Manager m1 = new Manager("Ani", 22, 26022, 85000, "CSE", 5);
+
+//         m1.desk_3();
+//     }
+// }
+
+// Output //
+
+// Person Name : Ani
+// Person Age : 22
+// Employee ID : 26022
+// Employee Salary : 85000
+// Employee Department : CSE
+// Employee Team Size : 5
 
 //===========================================================================================================================================================================//
 
