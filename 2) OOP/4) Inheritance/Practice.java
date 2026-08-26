@@ -549,14 +549,14 @@
 // }
 
 // class Car extends Vehicle{
-//     String fuleType;
+//     String fuelType;
 //     int numberOfDoors;
 
-//     Car(String brand, String model, int speed, String fuleType, int numberOfDoors){
+//     Car(String brand, String model, int speed, String fuelType, int numberOfDoors){
 
 //     super(brand,model,speed);
 
-//     this.fuleType = fuleType;
+//     this.fuelType = fuelType;
 //     this.numberOfDoors = numberOfDoors;
 
 //     }
@@ -565,7 +565,7 @@
 
 //         vdisplay();
 
-//         System.out.println("Car Fule Type : " + fuleType);
+//         System.out.println("Car fuel Type : " + fuelType);
 //         System.out.println("Car Number Of Doors : " + numberOfDoors);
 //         System.out.println();
 //     }
@@ -584,7 +584,7 @@
 // Car Brand : Tayota
 // Car Model : Fourtuner
 // Car Speed : 180
-// Car Fule Type : Diesel
+// Car fuel Type : Diesel
 // Car Number Of Doors : 5
 
 //===========================================================================================================================================================================//
@@ -821,6 +821,108 @@
 // Car -> numberOfDoors, fuelType
 // ElectricCar -> batteryCapacity, chargingTime
 // Use multilevel inheritance. Display all properties and create a method to calculate the approximate driving range.
+
+class Vehicle {
+    
+    String brand;
+    String model;
+
+    Vehicle(String brand, String model) {
+        
+        this.brand = brand;
+        this.model = model;
+
+    }
+
+    void desk_1() {
+
+        System.out.println("Brand : " + brand);
+        System.out.println("Model : " + model);        
+
+    }    
+}
+
+class Car extends Vehicle {
+
+    int numberOfDoors;
+    String fuelType;
+
+    Car(String brand, String model, int numberOfDoors, String fuelType) {
+
+        super(brand, model);
+
+        this.numberOfDoors = numberOfDoors;
+        this.fuelType = fuelType;
+
+    }
+
+    void desk_2() {
+
+        desk_1();
+
+        System.out.println("Number of Doors : " + numberOfDoors);
+        System.out.println("Fuel Type : " + fuelType);
+
+    }
+}
+
+class ElectricCar extends Car {
+
+    int batteryCapacity;
+    int chargingTime;
+
+    ElectricCar(String brand, String model, int numberOfDoors, String fuelType, int batteryCapacity, int chargingTime) {
+
+        super(brand, model, numberOfDoors, fuelType);
+
+        this.batteryCapacity = batteryCapacity;
+        this.chargingTime = chargingTime;
+
+    }
+
+    void calcRang() {
+        
+        int consumption = 150;
+
+        double range = (double) batteryCapacity / consumption ;
+
+        System.out.println("Approximate Driving Range : " + range + " km");
+
+    }
+
+    void desk_3() {
+
+        desk_2();
+
+        System.out.println("Battery Capacity : "  + batteryCapacity + " Wh");
+        System.out.println("Charging Time : " + chargingTime + " Hours");
+
+        calcRang();
+
+        System.out.println();
+        
+    }
+}
+
+public class Practice {
+    public static void main(String [] args) {
+
+        ElectricCar e1 = new ElectricCar("Tata", "Punch", 4, "EV", 15552, 6);
+
+        e1.desk_3();
+
+    }
+}
+
+// Output //
+
+// Brand : Tata
+// Model : Punch
+// Number of Doors : 4
+// Fuel Type : EV
+// Battery Capacity : 15552 Wh
+// Charging Time : 6 Hours
+// Approximate Driving Range : 103.68 km
 
 //===========================================================================================================================================================================//
 
