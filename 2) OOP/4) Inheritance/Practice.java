@@ -73,6 +73,7 @@
 // Employee Company name : TCS
 // ===============================================
 
+
 //===========================================================================================================================================================================//
 
 // 2. Student Count
@@ -136,6 +137,7 @@
 // =============================
 // Student Counts in total : 5
 
+
 //===========================================================================================================================================================================//
 
 // 3. Bank Account Number Generator
@@ -194,6 +196,7 @@
 // Customer Account Number : 1005
 // Customer Name : abhi
 
+
 //===========================================================================================================================================================================//
 
 // 4. Static Calculator
@@ -235,6 +238,7 @@
 // Multiplication : 75
 // Division : 3
 // Square : 225
+
 
 //===========================================================================================================================================================================//
 
@@ -278,6 +282,7 @@
 // Course : IT
 // Mark : 88
 
+
 //===========================================================================================================================================================================//
 
 // 6. Employee Salary Update
@@ -315,6 +320,7 @@
 // Employee ID : 150
 // Employee Name : Ani
 // Employee Salary : 900000
+
 
 //===========================================================================================================================================================================//
 
@@ -361,6 +367,7 @@
 // Product Price : 1500
 // Quantity : 7
 // Total price : 10500.0
+
 
 //===========================================================================================================================================================================//
 
@@ -429,6 +436,7 @@
 // Mobile Brand : OnePlus
 // Mobile Model : 15
 // Mobile Price : 30000
+
 
 //===========================================================================================================================================================================//
 
@@ -524,6 +532,8 @@
 // Programming Language : Python
 // Project Name : AI Project
 // ======================================================
+
+
 //===========================================================================================================================================================================//
 
 // 10. Vehicle and Car
@@ -586,6 +596,7 @@
 // Car Speed : 180
 // Car fuel Type : Diesel
 // Car Number Of Doors : 5
+
 
 //===========================================================================================================================================================================//
 
@@ -720,6 +731,7 @@
 // Student Course Name : CSE
 // Student Marks : 85
 
+
 //===========================================================================================================================================================================//
 
 // 13. Person -> Employee -> Managernn
@@ -812,6 +824,7 @@
 // Employee Salary : 85000
 // Employee Department : CSE
 // Employee Team Size : 5
+
 
 //===========================================================================================================================================================================//
 
@@ -924,6 +937,7 @@
 // Charging Time : 6 Hours
 // Approximate Driving Range : 103.68 km
 
+
 //===========================================================================================================================================================================//
 
 // 15. Student -> GraduateStudent -> ResearchStudent
@@ -933,103 +947,240 @@
 // ResearchStudent -> researchTopic, guideName
 // Use multilevel inheritance and display complete research student information.
 
-class Student {
-    String name;
-    int rollNo;
-    int marks;
+// class Student {
+//     String name;
+//     int rollNo;
+//     int marks;
 
-    Student(String name, int rollNo, int marks) {
+//     Student(String name, int rollNo, int marks) {
         
-        this.name = name;
-        this.rollNo = rollNo;
-        this.marks = marks;
+//         this.name = name;
+//         this.rollNo = rollNo;
+//         this.marks = marks;
 
-    }
+//     }
 
-    void desk_1() {
+//     void desk_1() {
         
-        System.out.println("Student Name : " + name);
-        System.out.println("Strudent Roll No : " + rollNo);
-        System.out.println("Student Marks : " + marks);
+//         System.out.println("Student Name : " + name);
+//         System.out.println("Strudent Roll No : " + rollNo);
+//         System.out.println("Student Marks : " + marks);
 
-    }
-}
+//     }
+// }
 
-class GraduateStudent extends Student {
+// class GraduateStudent extends Student {
 
-    String specialization;
-    String university;
+//     String specialization;
+//     String university;
 
-    GraduateStudent(String name, int rollNo, int marks, String specialization, String university) {
+//     GraduateStudent(String name, int rollNo, int marks, String specialization, String university) {
 
-        super(name, rollNo, marks);
+//         super(name, rollNo, marks);
 
-        this.specialization = specialization;
-        this.university = university;
+//         this.specialization = specialization;
+//         this.university = university;
 
-    }
+//     }
 
-    void desk_2() {
+//     void desk_2() {
 
-        desk_1();
+//         desk_1();
 
-        System.out.println("Student Specialization : " + specialization);
-        System.out.println("Student University : " + university);
+//         System.out.println("Student Specialization : " + specialization);
+//         System.out.println("Student University : " + university);
 
-    }
-}
+//     }
+// }
 
-class ResearchStudent extends GraduateStudent {
+// class ResearchStudent extends GraduateStudent {
 
-    String researchTopic;
-    String guideName;
+//     String researchTopic;
+//     String guideName;
 
-    ResearchStudent(String name, int rollNo, int marks, String specialization, String university, String researchTopic, String guideName) {
+//     ResearchStudent(String name, int rollNo, int marks, String specialization, String university, String researchTopic, String guideName) {
 
-        super(name, rollNo, marks, specialization, university);
+//         super(name, rollNo, marks, specialization, university);
 
-        this.researchTopic = researchTopic;
-        this.guideName = guideName;
+//         this.researchTopic = researchTopic;
+//         this.guideName = guideName;
 
-    }
+//     }
 
-    void desk_3() {
+//     void desk_3() {
 
-        desk_2();
+//         desk_2();
 
-        System.out.println("Student Reserch Topic : " + researchTopic);
-        System.out.println("Student Guide Name : " + guideName);
+//         System.out.println("Student Reserch Topic : " + researchTopic);
+//         System.out.println("Student Guide Name : " + guideName);
 
-    }
-}
+//     }
+// }
 
-public class Practice {
-    public static void main(String [] args) {
+// public class Practice {
+//     public static void main(String [] args) {
 
-        ResearchStudent r1 = new ResearchStudent("Ani", 101, 85, "AI", "SPPU", "Human Interaction", "V.K. Jord");
+//         ResearchStudent r1 = new ResearchStudent("Ani", 101, 85, "AI", "SPPU", "Human Interaction", "V.K. Jord");
 
-        r1.desk_3();
-    }
-}
+//         r1.desk_3();
+//     }
+// }
 
 // Output // 
 
-Student Name : Ani
-Strudent Roll No : 101
-Student Marks : 85
-Student Specialization : AI
-Student University : SPPU
-Student Reserch Topic : Human Interaction
-Student Guide Name : V.K. Jord
+// Student Name : Ani
+// Strudent Roll No : 101
+// Student Marks : 85
+// Student Specialization : AI
+// Student University : SPPU
+// Student Reserch Topic : Human Interaction
+// Student Guide Name : V.K. Jord
+
 
 //===========================================================================================================================================================================//
 
 // 16. Employee -> Developer -> SeniorDeveloper
 // Create three classes:
 // Employee -> id, name, salary
-// Developer -> programmingLanguage, project
+// Developer -> programmingLanguage, projectName
 // SeniorDeveloper -> experience, teamSize
 // Use multilevel inheritance. Create a method to calculate a bonus based on experience.
+
+// class Employee {
+
+//     int id;
+//     String name;
+//     int salary;
+
+//     Employee(int id, String name, int salary) {
+
+//         this.id = id;
+//         this.name = name;
+//         this.salary = salary;
+
+//     }
+
+//     void desk_1() {
+
+//         System.out.println("Employee ID : " + id);
+//         System.out.println("Employee Name : " + name);
+//         System.out.println("Employee Salary : " + salary);
+//     }
+// }
+
+// class Developer extends Employee {
+
+//     String programmingLanguage;
+//     String projectName;
+
+//     Developer(int id, String name, int salary, String programmingLanguage, String projectName) {
+
+//         super(id, name, salary);
+
+//         this.programmingLanguage = programmingLanguage;
+//         this.projectName = projectName;
+
+//     }
+
+//     void desk_2() {
+
+//         desk_1();
+
+//         System.out.println("Developer Programming Language : " + programmingLanguage);
+//         System.out.println("Developer Project Name : " + projectName);
+
+//     }
+// }
+
+// class SeniorDeveloper extends Developer {
+
+//     int experience;
+//     int teamSize;
+
+//     SeniorDeveloper(int id, String name, int salary, String programmingLanguage, String projectName, int experience, int teamSize) {
+
+//         super(id, name, salary, programmingLanguage, projectName);
+
+//         this.experience = experience;
+//         this.teamSize = teamSize;
+
+//     }
+
+//     void calcBonus() {
+
+//         double bonus;
+
+//         if(experience >= 5) {
+//             bonus = salary * 0.20;
+//         }
+//         else if(experience >= 3) {
+//             bonus = salary * 0.10;
+//         }
+//         else {
+//             bonus = salary * 0.5;
+//         }
+
+//         System.out.println("Bonus : " + bonus);
+
+//     }
+
+//     void desk_3() {
+
+//         desk_2();
+
+//         System.out.println("Senior Developer Experience : " + experience + " Years");
+//         System.out.println("Senior Developer Team Size : " + teamSize);
+
+//         calcBonus();
+
+//         System.out.println();
+
+
+//     }
+// }
+
+// public class Practice {
+//     public static void main(String [] args) {
+
+//         SeniorDeveloper s1 = new SeniorDeveloper(101, "Ani", 85000, "JAVA", "Avenu", 6, 4);
+//         SeniorDeveloper s2 = new SeniorDeveloper(101, "Avi", 76000, "Ruby", "Grance", 3, 4);
+//         SeniorDeveloper s3 = new SeniorDeveloper(101, "Prit", 59000, "C", "Vento", 2, 4);
+
+//         s1.desk_3();
+//         s2.desk_3();
+//         s3.desk_3();
+//     }
+// }
+
+// Output //
+
+// Employee ID : 101
+// Employee Name : Ani
+// Employee Salary : 85000
+// Developer Programming Language : JAVA
+// Developer Project Name : Avenu
+// Senior Developer Experience : 6 Years
+// Senior Developer Team Size : 4
+// Bonus : 17000.0
+
+// Employee ID : 101
+// Employee Name : Avi
+// Employee Salary : 76000
+// Developer Programming Language : Ruby
+// Developer Project Name : Grance
+// Senior Developer Experience : 3 Years
+// Senior Developer Team Size : 4
+// Bonus : 7600.0
+
+// Employee ID : 101
+// Employee Name : Prit
+// Employee Salary : 59000
+// Developer Programming Language : C
+// Developer Project Name : Vento
+// Senior Developer Experience : 2 Years
+// Senior Developer Team Size : 4
+// Bonus : 29500.0
+
 
 //===========================================================================================================================================================================//
 
@@ -1040,6 +1191,124 @@ Student Guide Name : V.K. Jord
 // HR -> recruitmentArea
 // Use hierarchical inheritance and display the details of all three types of employees.
 
+// class Employee {
+
+//     int id;
+//     String name;
+//     int salary;
+
+//     Employee(int id,String name, int salary) {
+
+//         this.id = id;
+//         this.name = name;
+//         this.salary = salary;
+//     }
+
+//     void desk_0() {
+
+//         System.out.println("Employee ID : " + id);
+//         System.out.println("Employee Name : " + name);
+//         System.out.println("Employee Salary : " + salary);
+//     }
+// }
+
+// class Developer extends Employee {
+
+//     String programmingLanguage;
+
+//     Developer(int id,String name, int salary, String programmingLanguage) {
+
+//         super(id, name, salary);
+
+//         this.programmingLanguage = programmingLanguage;
+
+//     }
+
+//     void desk_1() {
+
+//         desk_0();
+
+//         System.out.println("Developer Programing Language : " + programmingLanguage);
+//         System.out.println();
+
+//     }
+// }
+
+// class Tester extends Employee {
+
+//     String testingTool;
+
+//     Tester(int id,String name, int salary, String testingTool) {
+
+//         super(id, name, salary);
+
+//         this.testingTool = testingTool;
+
+//     }
+
+//     void desk_2() {
+
+//         desk_0();
+
+//         System.out.println("Tester Testing Tool : " + testingTool);
+//         System.out.println();
+
+//     }
+// }
+
+// class HR extends Employee {
+
+//     String recruitmentArea;
+
+//     HR(int id,String name, int salary, String recruitmentArea) {
+
+//         super(id, name, salary);
+        
+//         this.recruitmentArea = recruitmentArea;
+
+//     }
+
+//     void desk_3(){
+        
+//         desk_0();
+
+//         System.out.println("HR Recruitment Area : " + recruitmentArea);
+//         System.out.println();
+
+//     }
+// }
+
+// public class Practice {
+//     public static void main(String [] args) {
+
+//         Developer d1 = new Developer(101, "Ani", 85000, "JAVA");
+//         Tester t1 = new Tester(102, "Avi", 78000, "UI/E2E Testing");
+//         HR h1 = new HR(103, "Abi", 84000, "Software Engineer");
+
+//         d1.desk_1();
+//         t1.desk_2();
+//         h1.desk_3();
+//     }
+// }
+
+// Output //
+
+// Employee ID : 101
+// Employee Name : Ani
+// Employee Salary : 85000
+// Developer Programing Language : JAVA
+
+// Employee ID : 102
+// Employee Name : Avi
+// Employee Salary : 78000
+// Tester Testing Tool : UI/E2E Testing
+
+// Employee ID : 103
+// Employee Name : Abi
+// Employee Salary : 84000
+// HR Recruitment Area : Software Engineer
+
+
 //===========================================================================================================================================================================//
 
 // 18. Vehicle Hierarchy
@@ -1049,6 +1318,125 @@ Student Guide Name : V.K. Jord
 // Truck -> loadCapacity
 // Use hierarchical inheritance. Create objects for each class and display their details.
 
+// class Vehicle {
+
+//     String brand;
+//     String model;
+//     int price;
+
+//     Vehicle(String brand, String model, int price) {
+
+//         this.brand = brand;
+//         this.model = model;
+//         this.price = price;
+
+//     }
+
+//     void desk_0() {
+
+//         System.out.println("Brand : " + brand);
+//         System.out.println("Model : " + model);
+//         System.out.println("Price : " + price);
+//     }
+// }
+
+// class Car extends Vehicle {
+
+//     int numberOfDoors;
+
+//     Car(String brand, String model, int price, int numberOfDoors) {
+
+//         super(brand, model, price);
+
+//         this.numberOfDoors = numberOfDoors;
+    
+//     }
+
+//     void desk_1() {
+
+//         desk_0();
+
+//         System.out.println("Number Of Doors : " + numberOfDoors);
+//         System.out.println();
+
+//     }
+// }
+
+// class Bike extends Vehicle {
+
+//     int engineCapacity;
+
+//     Bike(String brand, String model, int price, int engineCapacity) {
+
+//         super(brand, model, price);
+
+//         this.engineCapacity = engineCapacity;
+
+//     }
+
+//     void desk_2() {
+
+//         desk_0();
+
+//         System.out.println("Engine Capacity : " + engineCapacity + " cc");
+//         System.out.println();
+
+//     }
+// }
+
+// class Truck extends Vehicle {
+
+//     int loadCapacity;
+
+//     Truck(String brand, String model, int price, int loadCapacity) {
+
+//         super(brand, model, price);
+
+//         this.loadCapacity = loadCapacity;
+
+//     }
+
+//     void desk_3() {
+
+//         desk_0();
+
+//         System.out.println("Load Capacity : " + loadCapacity + " Ton");
+//         System.out.println();
+
+//     }
+// }
+
+// public class Practice {
+//     public static void main(String [] args) {
+
+//         Car c1 = new Car("Audi", "R8", 450000, 2);
+//         Bike b1 = new Bike("Baja", "NS400", 150000, 400);
+//         Truck t1 = new Truck("Tayota", "Trindra", 850000, 14);
+
+//         c1.desk_1();
+//         b1.desk_2();
+//         t1.desk_3();
+//     }
+// }
+
+// Output //
+
+// Brand : Audi
+// Model : R8
+// Price : 450000
+// Number Of Doors : 2
+
+// Brand : Baja
+// Model : NS400
+// Price : 150000
+// Engine Capacity : 400 cc
+
+// Brand : Tayota
+// Model : Trindra
+// Price : 850000
+// Load Capacity : 14 Ton
+
+
 //===========================================================================================================================================================================//
 
 // 19. Account Hierarchy
@@ -1057,6 +1445,128 @@ Student Guide Name : V.K. Jord
 // CurrentAccount -> overdraftLimit
 // SalaryAccount -> employerName
 // Use hierarchical inheritance and display account information for each account type.
+
+class Account {
+
+    int accountNumber;
+    String holderName;
+    int balance;
+
+    Account(int accountNumber, String holderName, int balance) {
+
+    this.accountNumber = accountNumber;
+    this.holderName = holderName;
+    this.balance = balance;
+
+    }
+
+    void desk_0() {
+
+        System.out.println("Account Number : " + accountNumber);
+        System.out.println("Account Holder Name : " + holderName);
+        System.out.println("Balance : " + balance);
+
+    }
+}
+
+class SavingsAccount extends Account {
+
+    double interestRate;
+
+    SavingsAccount(int accountNumber, String holderName, int balance, double interestRate) {
+
+        super(accountNumber, holderName, balance);
+
+        this.interestRate = interestRate;
+
+    }
+
+    void desk_1() {
+
+        desk_0();
+
+        System.out.println("Savings Account Interest Rate : " + interestRate + " %");
+        System.out.println();
+
+    }
+}
+
+class CurrentAccount extends Account {
+
+    int overdraftLimit;
+
+    CurrentAccount(int accountNumber, String holderName, int balance, int overdraftLimit) {
+
+        super(accountNumber, holderName, balance);
+
+        this.overdraftLimit = overdraftLimit;
+
+    }
+
+    void desk_2() {
+
+        desk_0();
+
+        System.out.println("Current Account Overdraft Limit : " + overdraftLimit);
+        System.out.println();
+
+    }
+}
+
+class SalaryAccount extends Account {
+
+    String employeeName;
+
+    SalaryAccount(int accountNumber, String holderName, int balance, String employeeName) {
+
+        super(accountNumber, holderName, balance);
+
+        this.employeeName = employeeName;
+
+
+    }
+
+    void desk_3() {
+
+        desk_0();
+
+
+        System.out.println("Salary Account Employee Name : " + employeeName);
+        System.out.println();
+
+    }
+}
+
+public class Practice {
+    public static void main(String [] args) {
+
+        SavingsAccount s1 = new SavingsAccount(101, "Ani", 590000, 7.8);
+        CurrentAccount c1 = new CurrentAccount(102, "Avi", 68000, 43000);
+        SalaryAccount  e1 = new SalaryAccount(103, "Anu", 91000, "Anu");
+
+        s1.desk_1();
+        c1.desk_2();
+        e1.desk_3();
+
+    }
+}
+
+// Output //
+
+Account Number : 101
+Account Holder Name : Ani
+Balance : 590000
+Savings Account Interest Rate : 7.8 %
+
+Account Number : 102
+Account Holder Name : Avi
+Balance : 68000
+Current Account Overdraft Limit : 43000
+
+Account Number : 103
+Account Holder Name : Anu
+Balance : 91000
+Salary Account Employee Name : Anu
 
 //===========================================================================================================================================================================//
 
