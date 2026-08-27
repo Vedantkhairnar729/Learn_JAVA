@@ -822,97 +822,97 @@
 // ElectricCar -> batteryCapacity, chargingTime
 // Use multilevel inheritance. Display all properties and create a method to calculate the approximate driving range.
 
-class Vehicle {
+// class Vehicle {
     
-    String brand;
-    String model;
+//     String brand;
+//     String model;
 
-    Vehicle(String brand, String model) {
+//     Vehicle(String brand, String model) {
         
-        this.brand = brand;
-        this.model = model;
+//         this.brand = brand;
+//         this.model = model;
 
-    }
+//     }
 
-    void desk_1() {
+//     void desk_1() {
 
-        System.out.println("Brand : " + brand);
-        System.out.println("Model : " + model);        
+//         System.out.println("Brand : " + brand);
+//         System.out.println("Model : " + model);        
 
-    }    
-}
+//     }    
+// }
 
-class Car extends Vehicle {
+// class Car extends Vehicle {
 
-    int numberOfDoors;
-    String fuelType;
+//     int numberOfDoors;
+//     String fuelType;
 
-    Car(String brand, String model, int numberOfDoors, String fuelType) {
+//     Car(String brand, String model, int numberOfDoors, String fuelType) {
 
-        super(brand, model);
+//         super(brand, model);
 
-        this.numberOfDoors = numberOfDoors;
-        this.fuelType = fuelType;
+//         this.numberOfDoors = numberOfDoors;
+//         this.fuelType = fuelType;
 
-    }
+//     }
 
-    void desk_2() {
+//     void desk_2() {
 
-        desk_1();
+//         desk_1();
 
-        System.out.println("Number of Doors : " + numberOfDoors);
-        System.out.println("Fuel Type : " + fuelType);
+//         System.out.println("Number of Doors : " + numberOfDoors);
+//         System.out.println("Fuel Type : " + fuelType);
 
-    }
-}
+//     }
+// }
 
-class ElectricCar extends Car {
+// class ElectricCar extends Car {
 
-    int batteryCapacity;
-    int chargingTime;
+//     int batteryCapacity;
+//     int chargingTime;
 
-    ElectricCar(String brand, String model, int numberOfDoors, String fuelType, int batteryCapacity, int chargingTime) {
+//     ElectricCar(String brand, String model, int numberOfDoors, String fuelType, int batteryCapacity, int chargingTime) {
 
-        super(brand, model, numberOfDoors, fuelType);
+//         super(brand, model, numberOfDoors, fuelType);
 
-        this.batteryCapacity = batteryCapacity;
-        this.chargingTime = chargingTime;
+//         this.batteryCapacity = batteryCapacity;
+//         this.chargingTime = chargingTime;
 
-    }
+//     }
 
-    void calcRang() {
+//     void calcRang() {
+
+//         int consumption = 150;
+
+//         double range = (double) batteryCapacity / consumption ;
+
+//         System.out.println("Approximate Driving Range : " + range + " km");
+
+//     }
+
+//     void desk_3() {
+
+//         desk_2();
+
+//         System.out.println("Battery Capacity : "  + batteryCapacity + " Wh");
+//         System.out.println("Charging Time : " + chargingTime + " Hours");
+
+//         calcRang();
+
+//         System.out.println();
         
-        int consumption = 150;
+//     }
+// }
 
-        double range = (double) batteryCapacity / consumption ;
+// public class Practice {
+//     public static void main(String [] args) {
 
-        System.out.println("Approximate Driving Range : " + range + " km");
+//         ElectricCar e1 = new ElectricCar("Tata", "Punch", 4, "EV", 15552, 6);
 
-    }
+//         e1.desk_3();
 
-    void desk_3() {
-
-        desk_2();
-
-        System.out.println("Battery Capacity : "  + batteryCapacity + " Wh");
-        System.out.println("Charging Time : " + chargingTime + " Hours");
-
-        calcRang();
-
-        System.out.println();
-        
-    }
-}
-
-public class Practice {
-    public static void main(String [] args) {
-
-        ElectricCar e1 = new ElectricCar("Tata", "Punch", 4, "EV", 15552, 6);
-
-        e1.desk_3();
-
-    }
-}
+//     }
+// }
 
 // Output //
 
@@ -932,6 +932,95 @@ public class Practice {
 // GraduateStudent -> specialization, university
 // ResearchStudent -> researchTopic, guideName
 // Use multilevel inheritance and display complete research student information.
+
+class Student {
+    String name;
+    int rollNo;
+    int marks;
+
+    Student(String name, int rollNo, int marks) {
+        
+        this.name = name;
+        this.rollNo = rollNo;
+        this.marks = marks;
+
+    }
+
+    void desk_1() {
+        
+        System.out.println("Student Name : " + name);
+        System.out.println("Strudent Roll No : " + rollNo);
+        System.out.println("Student Marks : " + marks);
+
+    }
+}
+
+class GraduateStudent extends Student {
+
+    String specialization;
+    String university;
+
+    GraduateStudent(String name, int rollNo, int marks, String specialization, String university) {
+
+        super(name, rollNo, marks);
+
+        this.specialization = specialization;
+        this.university = university;
+
+    }
+
+    void desk_2() {
+
+        desk_1();
+
+        System.out.println("Student Specialization : " + specialization);
+        System.out.println("Student University : " + university);
+
+    }
+}
+
+class ResearchStudent extends GraduateStudent {
+
+    String researchTopic;
+    String guideName;
+
+    ResearchStudent(String name, int rollNo, int marks, String specialization, String university, String researchTopic, String guideName) {
+
+        super(name, rollNo, marks, specialization, university);
+
+        this.researchTopic = researchTopic;
+        this.guideName = guideName;
+
+    }
+
+    void desk_3() {
+
+        desk_2();
+
+        System.out.println("Student Reserch Topic : " + researchTopic);
+        System.out.println("Student Guide Name : " + guideName);
+
+    }
+}
+
+public class Practice {
+    public static void main(String [] args) {
+
+        ResearchStudent r1 = new ResearchStudent("Ani", 101, 85, "AI", "SPPU", "Human Interaction", "V.K. Jord");
+
+        r1.desk_3();
+    }
+}
+
+// Output // 
+
+Student Name : Ani
+Strudent Roll No : 101
+Student Marks : 85
+Student Specialization : AI
+Student University : SPPU
+Student Reserch Topic : Human Interaction
+Student Guide Name : V.K. Jord
 
 //===========================================================================================================================================================================//
 
