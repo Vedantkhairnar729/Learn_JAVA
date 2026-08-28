@@ -1446,127 +1446,128 @@
 // SalaryAccount -> employerName
 // Use hierarchical inheritance and display account information for each account type.
 
-class Account {
+// class Account {
 
-    int accountNumber;
-    String holderName;
-    int balance;
+//     int accountNumber;
+//     String holderName;
+//     int balance;
 
-    Account(int accountNumber, String holderName, int balance) {
+//     Account(int accountNumber, String holderName, int balance) {
 
-    this.accountNumber = accountNumber;
-    this.holderName = holderName;
-    this.balance = balance;
+//     this.accountNumber = accountNumber;
+//     this.holderName = holderName;
+//     this.balance = balance;
 
-    }
+//     }
 
-    void desk_0() {
+//     void desk_0() {
 
-        System.out.println("Account Number : " + accountNumber);
-        System.out.println("Account Holder Name : " + holderName);
-        System.out.println("Balance : " + balance);
+//         System.out.println("Account Number : " + accountNumber);
+//         System.out.println("Account Holder Name : " + holderName);
+//         System.out.println("Balance : " + balance);
 
-    }
-}
+//     }
+// }
 
-class SavingsAccount extends Account {
+// class SavingsAccount extends Account {
 
-    double interestRate;
+//     double interestRate;
 
-    SavingsAccount(int accountNumber, String holderName, int balance, double interestRate) {
+//     SavingsAccount(int accountNumber, String holderName, int balance, double interestRate) {
 
-        super(accountNumber, holderName, balance);
+//         super(accountNumber, holderName, balance);
 
-        this.interestRate = interestRate;
+//         this.interestRate = interestRate;
 
-    }
+//     }
 
-    void desk_1() {
+//     void desk_1() {
 
-        desk_0();
+//         desk_0();
 
-        System.out.println("Savings Account Interest Rate : " + interestRate + " %");
-        System.out.println();
+//         System.out.println("Savings Account Interest Rate : " + interestRate + " %");
+//         System.out.println();
 
-    }
-}
+//     }
+// }
 
-class CurrentAccount extends Account {
+// class CurrentAccount extends Account {
 
-    int overdraftLimit;
+//     int overdraftLimit;
 
-    CurrentAccount(int accountNumber, String holderName, int balance, int overdraftLimit) {
+//     CurrentAccount(int accountNumber, String holderName, int balance, int overdraftLimit) {
 
-        super(accountNumber, holderName, balance);
+//         super(accountNumber, holderName, balance);
 
-        this.overdraftLimit = overdraftLimit;
+//         this.overdraftLimit = overdraftLimit;
 
-    }
+//     }
 
-    void desk_2() {
+//     void desk_2() {
 
-        desk_0();
+//         desk_0();
 
-        System.out.println("Current Account Overdraft Limit : " + overdraftLimit);
-        System.out.println();
+//         System.out.println("Current Account Overdraft Limit : " + overdraftLimit);
+//         System.out.println();
 
-    }
-}
+//     }
+// }
 
-class SalaryAccount extends Account {
+// class SalaryAccount extends Account {
 
-    String employeeName;
+//     String employeeName;
 
-    SalaryAccount(int accountNumber, String holderName, int balance, String employeeName) {
+//     SalaryAccount(int accountNumber, String holderName, int balance, String employeeName) {
 
-        super(accountNumber, holderName, balance);
+//         super(accountNumber, holderName, balance);
 
-        this.employeeName = employeeName;
-
-
-    }
-
-    void desk_3() {
-
-        desk_0();
+//         this.employeeName = employeeName;
 
 
-        System.out.println("Salary Account Employee Name : " + employeeName);
-        System.out.println();
+//     }
 
-    }
-}
+//     void desk_3() {
 
-public class Practice {
-    public static void main(String [] args) {
+//         desk_0();
 
-        SavingsAccount s1 = new SavingsAccount(101, "Ani", 590000, 7.8);
-        CurrentAccount c1 = new CurrentAccount(102, "Avi", 68000, 43000);
-        SalaryAccount  e1 = new SalaryAccount(103, "Anu", 91000, "Anu");
 
-        s1.desk_1();
-        c1.desk_2();
-        e1.desk_3();
+//         System.out.println("Salary Account Employee Name : " + employeeName);
+//         System.out.println();
 
-    }
-}
+//     }
+// }
+
+// public class Practice {
+//     public static void main(String [] args) {
+
+//         SavingsAccount s1 = new SavingsAccount(101, "Ani", 590000, 7.8);
+//         CurrentAccount c1 = new CurrentAccount(102, "Avi", 68000, 43000);
+//         SalaryAccount  e1 = new SalaryAccount(103, "Anu", 91000, "Anu");
+
+//         s1.desk_1();
+//         c1.desk_2();
+//         e1.desk_3();
+
+//     }
+// }
 
 // Output //
 
-Account Number : 101
-Account Holder Name : Ani
-Balance : 590000
-Savings Account Interest Rate : 7.8 %
+// Account Number : 101
+// Account Holder Name : Ani
+// Balance : 590000
+// Savings Account Interest Rate : 7.8 %
 
-Account Number : 102
-Account Holder Name : Avi
-Balance : 68000
-Current Account Overdraft Limit : 43000
+// Account Number : 102
+// Account Holder Name : Avi
+// Balance : 68000
+// Current Account Overdraft Limit : 43000
 
-Account Number : 103
-Account Holder Name : Anu
-Balance : 91000
-Salary Account Employee Name : Anu
+// Account Number : 103
+// Account Holder Name : Anu
+// Balance : 91000
+// Salary Account Employee Name : Anu
+
 
 //===========================================================================================================================================================================//
 
@@ -1577,5 +1578,140 @@ Salary Account Employee Name : Anu
 // Staff -> department, designation
 // Use hierarchical inheritance. Create objects for all three classes and display their complete information. 
 // Also add one suitable method in each child class to demonstrate its specific functionality.
+
+class University {
+
+    String name;
+    int age;
+    int contactNumber;
+
+    University(String name, int age, int contactNumber) {
+
+        this.name = name;
+        this.age = age;
+        this.contactNumber = contactNumber;
+
+    }
+
+    void desk_0() {
+
+        System.out.println("Name : " + name);
+        System.out.println("Age : " + age);
+        System.out.println("Contact Number : " + contactNumber);
+
+    }
+}
+
+class Student extends University {
+
+    int rollNo;
+    String course;
+    int marks;
+
+    Student(String name, int age, int contactNumber,int rollNo, String course, int marks) {
+
+        super(name, age,contactNumber);
+
+        this.rollNo = rollNo;
+        this.course = course;
+        this.marks = marks;
+
+    }
+
+    void desk_1() {
+
+        desk_0();
+
+        System.out.println("Student Roll No : " + rollNo);
+        System.out.println("Student Course : " + course);
+        System.out.println("Student Marks : " + marks);
+        System.out.println();
+
+    }
+}
+
+class Teacher extends University {
+
+    String subject;
+    int salary;
+
+    Teacher(String name, int age, int contactNumber, String subject, int salary) {
+
+        super(name, age, contactNumber);
+
+        this.subject = subject;
+        this.salary = salary;
+
+    }
+
+    void desk_2() {
+
+        desk_0();
+
+        System.out.println("Teacher Subject : " + subject);
+        System.out.println("Teacher Salary : " + salary);
+        System.out.println();
+
+    }
+}
+
+class Staff extends University {
+
+    String department;
+    String designation;
+
+    Staff(String name, int age, int contactNumber, String department, String designation) {
+
+        super(name, age, contactNumber);
+
+        this.department = department;
+        this.designation = designation;
+
+    }
+
+    void desk_3() {
+
+        desk_0();
+
+        System.out.println("Staff Department : " + department);
+        System.out.println("Staff Designation : " + designation);
+        System.out.println();
+
+    }
+}
+
+public class Practice {
+    public static void main(String [] args) {
+
+        Student s1 = new Student("Avi", 22, 78649585, 101, "B.Tech", 87);
+        Teacher t1 = new Teacher("Ani", 22, 58482544, "AI", 89000);
+        Staff   f1 = new Staff("Abhi", 21, 84626844, "Student Section", "Head Clerk");
+
+        s1.desk_1();
+        t1.desk_2();
+        f1.desk_3();
+    }
+}
+
+// Output //
+
+Name : Avi
+Age : 22
+Contact Number : 78649585
+Student Roll No : 101
+Student Course : B.Tech
+Student Marks : 87
+
+Name : Ani
+Age : 22
+Contact Number : 58482544
+Teacher Subject : AI
+Teacher Salary : 89000
+
+Name : Abhi
+Age : 21
+Contact Number : 84626844
+Staff Department : Student Section
+Staff Designation : Head Clerk
 
 //===========================================================================================================================================================================//
