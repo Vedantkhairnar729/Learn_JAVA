@@ -10,7 +10,9 @@ class Student {
 
     String name = "Pune";
 
-    Address add = new Address();    //----------------------------------------------------------
+    Address add = new Address();    // Create an Address object and store its reference in the add instance variable.   
+                                    // It tells Java that add can refer to an Address object.
+                                    // This is the important line. Here add is an object/reference type instance variable.
 
     void display() {
 
