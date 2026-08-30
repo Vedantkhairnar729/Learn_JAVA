@@ -12,7 +12,7 @@ class Address {
 class Student {
 
 	String name;
-	Address loco;
+	Address loco; 
 	
 	Student(String name, Address loco) {
 	this.name = name;
