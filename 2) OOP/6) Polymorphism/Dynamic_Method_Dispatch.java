@@ -1,0 +1,38 @@
+class Animal {
+
+    void sound() {
+        System.out.println("Animal sound");
+    }
+}
+
+class Dog extends Animal {
+    
+    @Override
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}
+
+class Cat extends Animal {
+
+    @Override
+    void sound() {
+        System.out.println("Cat meow");
+    }
+}
+
+public class Dynamic_Method_Dispatch {
+    public static void main(String [] args) {
+
+        Animal a;       ///  Dynamic_Method_Dispatch
+
+        a = new Dog();  
+        a.sound();
+
+        a = new Cat();
+        a.sound();
+
+    }
+}
+
+/* The method that runs depends on the actual object, not just the reference type.
